@@ -5,7 +5,7 @@ body {
 }
 
 form {
-    width: 300px;
+    width: 500px;
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
@@ -34,9 +34,7 @@ input {
     width: calc(100% - 20px);
 }
 
-#addStudentBtn,
-#addLibraryVisitBtn,
-#showStudentHoursBtn {
+#searchbtn {
     font-family: 'Courier New';font-size: 18px;
     color: white;
     background-color: #4caf50;
@@ -47,26 +45,11 @@ input {
     display: inline-block;
 }
 
-#addStudentBtn,
-#addLibraryVisitBtn,
-#showStudentHoursBtn :hover {
+#searchbtn :hover{
     background-color: #45a049;
 }
 
 #result {
     font-size: 24px;
     margin-top: 20px;
-}
-
-#result-table {
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    width: 50%;
-    border: 2px solid #ccc;
-}
-
-#result-table th, #result-table td {
-    border: 1px solid #ccc;
-    padding: 8px;
 }

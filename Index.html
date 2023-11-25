@@ -3,50 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Оюутны номын санд суусан цаг</title>
+        <title>Ахуйн эд зүйлс</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="script.js" defer></script>
     </head>
+    
     <body>
-        <form id="studentForm">
-            <h2>Оюутны мэдээлэл</h2>
+    
+        <form id="search_form">
+            <h2>Өгөгдлийн сан дахь ахуйн эд зүйлсийн мэдээллээс хайлт хийх</h2>
 
-            <label for="stud_id">Оюутны ID:</label>
-            <input type="text" id="stud_id" name="stud_id" autocomplete="off"/>
+            <label for="target"></label>
+            <input type="text" id="target" name="target" autocomplete="off"/>
 
-            <label for="lname">Оюутны овог:</label>
-            <input type="text" id="lname" name="lname" autocomplete="off"/>
-
-            <label for="fname">Оюутны нэр:</label>
-            <input type="text" id="fname" name="fname" autocomplete="off"/>
-
-            <button type="button" id="addStudentBtn" onclick="addStudent()">Нэмэх</button>
-        </form>
-
-        <form id="visitForm">
-            <h2>Цаг бүртгэл</h2>
-
-            <label for="visit_date">Суусан өдөр:</label>
-            <input type="date" id="visit_date" name="visit_date" autocomplete="off"/>
-
-            <label for="time_spent">Өнгөрүүлсэн цаг:</label>
-            <input type="text" id="time_spent" name="time_spent" autocomplete="off"/>
-
-            <label for="student_id_visit">Оюутны ID:</label>
-            <input type="text" id="student_id_visit" name="student_id_visit" autocomplete="off"/>
-
-            <button type="button" id="addLibraryVisitBtn" onclick="addLibraryVisit()">Нэмэх</button>
-        </form>
-
-        <form id="hoursForm">
-            <h2>Тухайн өдөр номын санд сууж өнгөрүүлсэн оюутны мэдээлэл</h2>
-
-            <label for="specific_date">Хайх өдөр:</label>
-            <input type="date" id="specific_date" name="specific_date" />
-
-            <button type="button" id="showStudentHoursBtn" onclick="showStudentHours()">Харуулах</button>
+            <button type="button" id="searchbtn" onclick="search_target()">Хайх</button>
         </form>
         
         <div id="result"></div>
+        
     </body>
 </html>
