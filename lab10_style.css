@@ -5,7 +5,7 @@ body {
 }
 
 form {
-    width: 300px;
+    width: 450px;
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
@@ -34,7 +34,8 @@ input {
     width: calc(100% - 20px);
 }
 
-#SearchBtn {
+#SearchBtn,
+#DetailBtn {
     font-family: 'Courier New';font-size: 18px;
     color: white;
     background-color: #4caf50;
@@ -45,11 +46,17 @@ input {
     display: inline-block;
 }
 
-#SearchBtn :hover{
-    background-color: #114414;
+#SearchBtn:hover, #DetailBtn:hover{
+    background-color: #33a23a;
 }
 
 #result {
-    font-size: 24px;
-    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    background-color: #f0f0f0;
+    padding: 15px;
 }

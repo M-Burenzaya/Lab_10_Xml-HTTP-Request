@@ -11,15 +11,23 @@
     <body>
     
         <form id="SearchForm">
-            <h2>Өгөгдлийн сан дахь ахуйн эд зүйлсийн мэдээллээс хайлт хийх</h2>
+            <div id="Title"><h2>Өгөгдлийн сан дахь ахуйн эд зүйлсийн мэдээллээс хайлт хийх</h2></div>
 
             <label for="target"></label>
             <input type="text" id="target" name="target" autocomplete="off"/>
-
-            <button type="button" id="SearchBtn" onclick="SearchTarget()">Хайх</button>
+            <span id="RoomName"></span>
+            
+            <div id="SearchDiv">
+                <button type="button" id="SearchBtn" onclick="SearchTarget()">Хайх</button>
+            </div>
+            
+            <div id="DetailDiv"></div>
+            
+            <div id="ExitDiv"></div>
         </form>
         
         <div id="result"></div>
+        <div id="resultlink"></div>
         
     </body>
 </html>
