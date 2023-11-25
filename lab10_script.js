@@ -20,7 +20,7 @@ function SearchTarget() {
                           DetailsButton();
                           
                           //window.alert("Өгөгдөл амжилттай илгээгдлээ: " + this.responseText);
-                          //document.querySelector('#result').innerHTML = this.responseText;
+                          //document.querySelector('#resultlink').innerHTML = this.responseText;
                           
                         } else {
                             window.alert("Өгөгдлийн сангаас олсонгүй.");
@@ -59,6 +59,7 @@ function GetItem() {
     document.getElementById("SearchDiv").innerHTML = '<button type="button" id="SearchBtn" onclick="SearchTarget()">Хайх</button>';
     document.getElementById("Title").innerHTML = '<h2>Өгөгдлийн сан дахь ахуйн эд зүйлсийн мэдээллээс хайлт хийх</h2>';
     document.getElementById("result").innerHTML = '';
+    document.getElementById("resultlink").innerHTML = '';
     document.getElementById("RoomName").innerHTML = '';
     document.getElementById("RoomName").innerHTML = '';
 }
@@ -67,14 +68,14 @@ function GetDetail() {
     const parsedData = data;
     const ItemID = parsedData[0].ItemID;
     const RoomID = parsedData[0].RoomID;
-
+    
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
+        //document.getElementById("resultlink").innerHTML = this.responseText;
         if (this.readyState == 4) {
             if (this.status == 200) {
                 try {
                     const detailData = JSON.parse(this.responseText);
-
                     const itemData = detailData.ItemData;
                     const roomData = detailData.RoomData;
 

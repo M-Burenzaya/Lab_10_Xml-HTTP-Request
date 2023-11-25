@@ -16,7 +16,12 @@ VALUES
   (14, 'attic'),
   (15, 'garage');
 
-  INSERT INTO Items (ItemID, ItemName, RoomID)
+INSERT INTO ItemUsage (ItemID, Detail)
+VALUES
+(1, 'https://www.youtube.com/watch?v=KQSlPj1rhd8'),
+(2, 'https://www.youtube.com/watch?v=rObkmPXPozg');
+
+INSERT INTO Items (ItemID, ItemName, RoomID)
 VALUES
 (1, 'Sofa', 1),
 (2, 'Television', 1),
