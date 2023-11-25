@@ -4,6 +4,7 @@ $pass = '';
 $dbName = 'lab_9';
 $host = 'localhost';
 
+
 $conn = new mysqli($host, $user, $pass, $dbName);
 
 if ($conn->connect_error) {
