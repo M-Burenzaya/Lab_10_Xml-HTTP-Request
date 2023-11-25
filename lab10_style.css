@@ -34,7 +34,7 @@ input {
     width: calc(100% - 20px);
 }
 
-#searchbtn {
+#SearchBtn {
     font-family: 'Courier New';font-size: 18px;
     color: white;
     background-color: #4caf50;
@@ -45,7 +45,7 @@ input {
     display: inline-block;
 }
 
-#searchbtn :hover{
+#SearchBtn :hover{
     background-color: #114414;
 }
 

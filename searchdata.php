@@ -15,16 +15,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $enteredValue = $_POST["target"] ?? null;
 
-    if ($stud_id !== '' && $lname !== '' && $fname !== '') {
-    
-        if ($enteredValue !== '') {
-            echo "You entered: " . $enteredValue; // Return the entered value
-        } else {
-            echo "Please enter a value."; // Error message if no value is entered
-        }
+    if ($enteredValue !== '') {
+        echo "Хайсан утга: " . $enteredValue;
     } else {
-        echo "Бүх талбарыг бөглөнө үү.";
+        echo "Хайх утга оруулна уу.";
     }
+    
 } else {
     echo "Зөвхөн POST хүсэлт ашиглана уу.";
 }

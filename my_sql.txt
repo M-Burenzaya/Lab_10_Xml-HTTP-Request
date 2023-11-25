@@ -1,0 +1,17 @@
+CREATE TABLE Rooms (
+    RoomID INT PRIMARY KEY,
+    RoomName VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Items (
+    ItemID INT PRIMARY KEY,
+    ItemName VARCHAR(20) NOT NULL,
+    RoomID INT,
+    FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID)
+);
+
+CREATE TABLE ItemUsage (
+    ItemID INT,
+    Detail VARCHAR(100) NOT NULL,
+    FOREIGN KEY (ItemID) REFERENCES Items(ItemID)
+);
