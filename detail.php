@@ -7,14 +7,13 @@ $host = 'localhost';
 $conn = new mysqli($host, $user, $pass, $dbName);
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Холболт амжилтгүй: " . $conn->connect_error);
 }
 
 if (isset($_GET["ItemID"]) && isset($_GET["RoomID"])) {
     $itemID = $_GET["ItemID"];
     $roomID = $_GET["RoomID"];
 
-    // Fetch data from ItemUsage based on ItemID
     $stmtItem = $conn->prepare("SELECT ItemID, Detail FROM ItemUsage WHERE ItemID = ?");
     $stmtItem->bind_param("i", $itemID);
     $stmtItem->execute();
@@ -27,7 +26,6 @@ if (isset($_GET["ItemID"]) && isset($_GET["RoomID"])) {
         }
     }
 
-    // Fetch data from Rooms based on RoomID
     $stmtRoom = $conn->prepare("SELECT RoomID, RoomName FROM Rooms WHERE RoomID = ?");
     $stmtRoom->bind_param("i", $roomID);
     $stmtRoom->execute();
@@ -40,7 +38,6 @@ if (isset($_GET["ItemID"]) && isset($_GET["RoomID"])) {
         }
     }
 
-    // Combine the fetched data into a single array
     $combinedData = array(
         "ItemData" => $itemData,
         "RoomData" => $roomData
@@ -49,9 +46,7 @@ if (isset($_GET["ItemID"]) && isset($_GET["RoomID"])) {
     header('Content-Type: application/json');
     echo json_encode($combinedData);
 } else {
-    echo "Please provide ItemID and RoomID.";
+    echo "ItemID болон RoomID байх шаардлагатай";
 }
-
 $conn->close();
-
 ?>
